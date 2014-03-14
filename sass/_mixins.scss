@@ -1,0 +1,25 @@
+@mixin arrow($direction, $size, $color: black){
+	content:"";
+	position: absolute;
+	border: $size solid;
+	border-color:rgba(0, 0 ,0, 0);    
+	@if $direction == up{
+		border-bottom-color: $color;
+	}@else if $direction == down{
+		border-top-color: $color;
+	}@else if $direction == left{
+		border-right-color: $color;
+	}@else if $direction == right{
+		border-left-color: $color;
+	}
+}
+
+// @media (max-width:1715px) {           
+// 	#person11{                      
+// 		background: url(../nordimage/person11.png);
+// 		@extend #allapixelgubbar;
+// 		top: 4rem;
+// 		left: 100rem;
+// 		float: left;
+// 	  }
+// }
